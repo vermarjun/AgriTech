@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaPaperPlane, FaMicrophone, FaChevronDown } from "react-icons/fa";
 import { Listbox } from '@headlessui/react';
 import axios from "axios";
+import {API_URL} from "../App.tsx"
 
 interface Language {
   id: number;
@@ -41,7 +42,7 @@ export default function ChatScreen() {
   };
   
   async function fetchMessages(text:any, lang:any){
-      const response = await axios.post("http://localhost:3000/chatbot", {
+      const response = await axios.post(API_URL, {
           message: text,
           language: lang
         })

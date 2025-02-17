@@ -1,12 +1,13 @@
 import { Button } from "./button";
 import logo from "/leafIcon.png";
 import { useLocation } from "react-router-dom";
+import {URL} from "../../App.tsx"
 
 function NavbarItem(props: any) {
     const location = useLocation();
     return (
         <li>
-            <p onClick={()=> window.location.href = `${"http://localhost:5173"}/`} className={`font-semibold transition-all text-lg hover:cursor-pointer hover:scale-105 hover:backdrop-filter hover:backdrop-blur-lg hover:bg-opacity-30 p-2 rounded-xl ${location.pathname === "/" ? "text-black":"text-white"}`}>
+            <p onClick={()=> window.location.href = `${URL}/`} className={`font-semibold transition-all text-lg hover:cursor-pointer hover:scale-105 hover:backdrop-filter hover:backdrop-blur-lg hover:bg-opacity-30 p-2 rounded-xl ${location.pathname === "/" ? "text-black":"text-white"}`}>
                 {props.text}
             </p>
         </li>
@@ -44,7 +45,7 @@ export default function Navbar() {
                         {location.pathname == "/" && (
                             <li>
                                 <Button variant={"secondary"} onClick={() => {
-                                    window.location.href = `${"http://localhost:5173"}/dashboard.html`;
+                                    window.location.href = `${URL}/dashboard.html`;
                                 }}>
                                     Login
                                 </Button>

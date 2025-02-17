@@ -5,6 +5,9 @@ import Layout from "./Layout"
 import ChatScreen from "./components/ChatScreen"
 import GraphDisplay from "./components/LiveData"
 
+export const API_URL:string = "http://localhost:3000";
+export const URL:string = "https://agri-tech-orcin.vercel.app/";
+
 export default function App() {
   return (
     <div className={``}>
