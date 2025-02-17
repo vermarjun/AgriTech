@@ -22,6 +22,7 @@ export default function ChatScreen() {
   ];
 
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
+  // @ts-ignore
   const [chatHistory, setChatHistory] = useState<string[]>([
     "How does AI work?",
     "What is React?",
