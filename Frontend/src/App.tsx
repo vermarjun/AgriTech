@@ -4,9 +4,10 @@ import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Layout from "./Layout"
 import ChatScreen from "./components/ChatScreen"
 import GraphDisplay from "./components/LiveData"
+import Remedies from "./components/Remedies"
 
 export const API_URL:string = "http://localhost:3000";
-export const URL:string = "https://agri-tech-orcin.vercel.app/";
+export const URL:string = "http://localhost:5173";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
               <Route index element={<Home/>}/>
               <Route path="/chatbot" element={<ChatScreen/>}></Route>
               <Route path="/live" element={<GraphDisplay/>}></Route>
+              <Route path="/remedies" element={<Remedies/>}></Route>
             </Route>
         </Routes>
       </BrowserRouter>
