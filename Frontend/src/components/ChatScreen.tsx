@@ -42,7 +42,7 @@ export default function ChatScreen() {
   };
   
   async function fetchMessages(text:any, lang:any){
-      const response = await axios.post(API_URL, {
+      const response = await axios.post(`${API_URL}/chatbot`, {
           message: text,
           language: lang
         })
